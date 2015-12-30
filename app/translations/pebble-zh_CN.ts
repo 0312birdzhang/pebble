@@ -171,12 +171,12 @@
     <message>
         <location filename="../qml/pages/FirmwareUpgrade.qml" line="30"/>
         <source>Firmware upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>固件升级</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirmwareUpgrade.qml" line="66"/>
         <source>Begin upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>开始升级</translation>
     </message>
 </context>
 <context>
@@ -462,27 +462,27 @@ If it can&apos;t be found please check it&apos;s available and paired in Bluetoo
     <message>
         <location filename="../qml/pages/WatchPage.qml" line="67"/>
         <source>SMS</source>
-        <translation type="unfinished"></translation>
+        <translation>短信</translation>
     </message>
     <message>
         <location filename="../qml/pages/WatchPage.qml" line="72"/>
         <source>E-Mail</source>
-        <translation type="unfinished"></translation>
+        <translation>邮件</translation>
     </message>
     <message>
         <location filename="../qml/pages/WatchPage.qml" line="77"/>
         <source>FB</source>
-        <translation type="unfinished"></translation>
+        <translation>脸书</translation>
     </message>
     <message>
         <location filename="../qml/pages/WatchPage.qml" line="82"/>
         <source>Twt</source>
-        <translation type="unfinished"></translation>
+        <translation>推特</translation>
     </message>
     <message>
         <location filename="../qml/pages/WatchPage.qml" line="87"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>音乐</translation>
     </message>
     <message>
         <location filename="../qml/pages/WatchPage.qml" line="157"/>
