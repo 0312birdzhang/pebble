@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
-import org.pebbled 0.1
+import harbour.org.pebbled 0.1
 
 ApplicationWindow
 {

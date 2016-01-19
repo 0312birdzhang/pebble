@@ -39,6 +39,14 @@ BuildRequires:  desktop-file-utils
 Support for Pebble watch to receive events from SailfishOS device via Bluetooth.
 
 
+%package -n harbour-pebble
+Summary:    Support for Pebble watch in SailfishOS
+Group:      Qt/Qt
+
+%description -n harbour-pebble
+Support for Pebble watch to receive events from SailfishOS device via Bluetooth.
+
+
 %prep
 %setup -q -n %{name}-%{version}
 
@@ -66,6 +74,12 @@ rm -rf %{buildroot}
 # >> install post
 mkdir -p %{buildroot}%{_libdir}/systemd/user/user-session.target.wants
 ln -s ../pebbled.service %{buildroot}%{_libdir}/systemd/user/user-session.target.wants/
+
+cp %{buildroot}%{_bindir}/%{name} %{buildroot}%{_bindir}/harbour-%{name}
+cp -r %{buildroot}%{_datadir}/%{name}/qml %{buildroot}%{_datadir}/harbour-%{name}/
+cp %{buildroot}%{_bindir}/%{name}d %{buildroot}%{_datadir}/harbour-%{name}/
+mv %{buildroot}%{_datadir}/harbour-%{name}/harbour-pebble.desktop %{buildroot}%{_datadir}/applications/
+mv %{buildroot}%{_datadir}/harbour-%{name}/harbour-pebble.png %{buildroot}%{_datadir}/icons/hicolor/86x86/apps/
 # << install post
 
 desktop-file-install --delete-original       \
@@ -81,7 +95,8 @@ update-desktop-database
 
 %files
 %defattr(-,root,root,-)
-%{_bindir}
+%{_bindir}/%{name}
+%{_bindir}/%{name}d
 %{_datadir}/%{name}/qml
 %{_datadir}/%{name}/js
 %{_datadir}/%{name}/translations
@@ -91,3 +106,13 @@ update-desktop-database
 %{_libdir}/systemd/user/user-session.target.wants/%{name}d.service
 # >> files
 # << files
+
+%files -n harbour-pebble
+%defattr(-,root,root,-)
+%{_bindir}/harbour-%{name}
+%{_datadir}/harbour-%{name}/%{name}d
+%{_datadir}/harbour-%{name}/qml
+%{_datadir}/applications/harbour-%{name}.desktop
+%{_datadir}/icons/hicolor/86x86/apps/harbour-%{name}.png
+# >> files harbour-pebble
+# << files harbour-pebble

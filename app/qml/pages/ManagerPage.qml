@@ -1,5 +1,4 @@
 import QtQuick 2.0
-import QtQml 2.1
 import Sailfish.Silica 1.0
 import org.nemomobile.configuration 1.0
 import org.nemomobile.dbus 2.0
@@ -107,7 +106,7 @@ Page {
                 description: pebbled.enabled ? qsTr("Automatic startup") : qsTr("Manual startup")
                 checked: pebbled.enabled
                 automaticCheck: false
-                onClicked: pebbled.setEnabled(!checked)
+                onClicked: HARBOUR ? pageStack.push(Qt.resolvedUrl("HarbourPage.qml")) : pebbled.setEnabled(!checked)
             }
             TextSwitch {
                 text: qsTr("Active")
